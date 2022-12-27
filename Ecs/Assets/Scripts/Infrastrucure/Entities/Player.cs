@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[Serializable]
 public struct Player
 {
-    public Transform PlayerTransform;
-    public Rigidbody PlayerRigidbody;
-    public float PlayerSpeed;
+    public Transform playerTransform;
+    public Rigidbody playerRigidbody;
+    public float playerSpeed;
 }

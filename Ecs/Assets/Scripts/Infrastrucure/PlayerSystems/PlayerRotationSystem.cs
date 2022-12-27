@@ -12,11 +12,11 @@ public class PlayerRotationSystem : IEcsRunSystem
         {
             ref var player = ref _filter.Get1(i);
 
-            Plane playerPlane = new Plane(Vector3.up, player.PlayerTransform.position);
+            Plane playerPlane = new Plane(Vector3.up, player.playerTransform.position);
             Ray ray = _sceneData.mainCamera.ScreenPointToRay(Input.mousePosition);
             if (!playerPlane.Raycast(ray, out var hitDistance)) continue;
 
-            player.PlayerTransform.forward = ray.GetPoint(hitDistance) - player.PlayerTransform.position;
+            player.playerTransform.forward = ray.GetPoint(hitDistance) - player.playerTransform.position;
         }
     }
 }

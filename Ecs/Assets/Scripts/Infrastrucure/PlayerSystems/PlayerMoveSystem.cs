@@ -12,8 +12,8 @@ public class PlayerMoveSystem : IEcsRunSystem
             ref var player = ref _filter.Get1(i);
             ref var input = ref _filter.Get2(i);
 
-            Vector3 direction = (Vector3.forward * input.MoveInput.z + Vector3.right * input.MoveInput.x).normalized;
-            player.PlayerRigidbody.AddForce(direction * player.PlayerSpeed);
+            Vector3 direction = (Vector3.forward * input.moveInput.z + Vector3.right * input.moveInput.x).normalized;
+            player.playerRigidbody.AddForce(direction * player.playerSpeed);
         }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Static Data
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 86786142362470463, guid: 455ffca1a5c379a4ca6760b060af04b7, type: 3}
-  playerSpeed: 100
+  playerSpeed: 20

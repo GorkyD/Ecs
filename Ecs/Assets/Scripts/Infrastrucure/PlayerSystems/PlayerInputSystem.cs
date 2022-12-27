@@ -10,7 +10,7 @@ public class PlayerInputSystem : IEcsRunSystem
         foreach (var i in _filter)
         {
             ref var input = ref _filter.Get1(i);
-            input.MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+            input.moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         }
     }
 }

@@ -15,8 +15,8 @@ public class PlayerInitSystem : IEcsInitSystem
         ref var inputData = ref playerEntity.Get<PlayerInputData>();
         
         GameObject playerGo = Object.Instantiate(_staticData.playerPrefab, _sceneData.playerSpawnPoint.position, Quaternion.identity);
-        player.PlayerRigidbody = playerGo.GetComponent<Rigidbody>();
-        player.PlayerSpeed = _staticData.playerSpeed;
-        player.PlayerTransform = playerGo.transform; 
+        player.playerRigidbody = playerGo.GetComponent<Rigidbody>();
+        player.playerSpeed = _staticData.playerSpeed;
+        player.playerTransform = playerGo.transform; 
     }
 }

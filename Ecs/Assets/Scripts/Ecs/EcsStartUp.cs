@@ -1,6 +1,7 @@
 using System;
 using Leopotam.Ecs;
 using UnityEngine;
+using Voody.UniLeo;
 
 public class EcsStartUp : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class EcsStartUp : MonoBehaviour
         RuntimeData runtimeData = new RuntimeData();
 
         _updateSystems
+            .ConvertScene()
             .Add(new PlayerInputSystem())
             .Add(new PlayerInitSystem())
             .Add(new PlayerRotationSystem())
@@ -28,6 +30,7 @@ public class EcsStartUp : MonoBehaviour
             .Inject(runtimeData);
 
         _fixedUpdateSystems
+            .ConvertScene()
             .Add(new PlayerMoveSystem()); 
         
         _updateSystems.Init();
