@@ -20,6 +20,7 @@ public class EcsStartUp : MonoBehaviour
         RuntimeData runtimeData = new RuntimeData();
 
         _updateSystems
+            .Add(new PlayerInputSystem())
             .Add(new PlayerInitSystem())
             .Add(new PlayerRotationSystem())
             .Inject(configuration)
