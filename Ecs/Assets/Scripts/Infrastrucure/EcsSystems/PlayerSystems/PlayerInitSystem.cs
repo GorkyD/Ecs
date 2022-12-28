@@ -1,4 +1,5 @@
-﻿using Leopotam.Ecs;
+﻿using Infrastrucure.Components;
+using Leopotam.Ecs;
 using UnityEngine;
 
 public class PlayerInitSystem : IEcsInitSystem
@@ -12,11 +13,12 @@ public class PlayerInitSystem : IEcsInitSystem
         EcsEntity playerEntity = _ecsWorld.NewEntity();
         
         ref var player = ref playerEntity.Get<Player>();
-        ref var inputData = ref playerEntity.Get<PlayerInputData>();
+        playerEntity.Get<PlayerInputData>();
         
         GameObject playerGo = Object.Instantiate(_staticData.playerPrefab, _sceneData.playerSpawnPoint.position, Quaternion.identity);
         player.playerRigidbody = playerGo.GetComponent<Rigidbody>();
+        player.characterController = playerGo.GetComponent<CharacterController>();
         player.playerSpeed = _staticData.playerSpeed;
-        player.playerTransform = playerGo.transform; 
+        player.playerTransform = playerGo.transform;
     }
 }

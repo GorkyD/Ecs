@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 1439260547843730812}
   - component: {fileID: 7858652339768201444}
   - component: {fileID: 6679744699378266318}
-  - component: {fileID: 9124434373528816245}
-  - component: {fileID: 3185537098108137441}
-  - component: {fileID: -4222795131340269939}
+  - component: {fileID: 4025326603511181082}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -117,46 +115,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9124434373528816245
-MonoBehaviour:
+--- !u!143 &4025326603511181082
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86786142362470463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  convertMode: 0
---- !u!114 &3185537098108137441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86786142362470463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d57ddd0452634657a74531f9b81d713c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    playerTransform: {fileID: 6323717134131538574}
-    playerRigidbody: {fileID: 6679744699378266318}
-    playerSpeed: 10
---- !u!114 &-4222795131340269939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86786142362470463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5eaaa1d85c94b16919ab400fe941be1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    moveInput: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

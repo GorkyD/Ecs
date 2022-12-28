@@ -5,17 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fdaf81f-1d22-44c6-9cfd-e2b1106b5c1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/PlayerComponentProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/PlayerComponentProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponentProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponentProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/TransformComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/TransformComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraFollowSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraFollowSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraInitSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraInitSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ecs/EcsStartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ecs/EcsStartUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/PlayerInputData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/PlayerInputData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerRotationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerRotationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/SceneData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/PlayerComponentProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerComponentProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/PlayerComponentProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerComponentProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/PlayerInputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerInputProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities/PlayerInputProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerInputProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInitSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInitSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerInputSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInputSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerMoveSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerRotationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerRotationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/PlayerSystems/PlayerRotationSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerRotationSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Static Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Static Data.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,10 +89,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17440">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17440" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -89,7 +110,8 @@
       <updated>1671917845554</updated>
       <workItem from="1671917861826" duration="2245000" />
       <workItem from="1672124202331" duration="2021000" />
-      <workItem from="1672130103796" duration="363000" />
+      <workItem from="1672130103796" duration="1221000" />
+      <workItem from="1672191014831" duration="3351000" />
     </task>
     <servers />
   </component>
@@ -112,5 +134,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInitSystem.cs</url>
+          <line>21</line>
+          <properties documentPath="D:\Git\Ecs\Ecs\Ecs\Assets\Scripts\Infrastrucure\EcsSystems\PlayerSystems\PlayerInitSystem.cs" initialLine="21" containingFunctionPresentation="method 'Init'">
+            <startOffsets>
+              <option value="778" />
+            </startOffsets>
+            <endOffsets>
+              <option value="822" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraInitSystem.cs</url>
+          <line>17</line>
+          <properties documentPath="D:\Git\Ecs\Ecs\Ecs\Assets\Scripts\Infrastrucure\EcsSystems\CameraSystems\CameraInitSystem.cs" initialLine="17" containingFunctionPresentation="method 'Init'">
+            <startOffsets>
+              <option value="448" />
+            </startOffsets>
+            <endOffsets>
+              <option value="494" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

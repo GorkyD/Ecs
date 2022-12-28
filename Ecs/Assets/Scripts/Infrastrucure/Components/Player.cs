@@ -5,6 +5,7 @@ using UnityEngine;
 public struct Player
 {
     public Transform playerTransform;
+    public CharacterController characterController;
     public Rigidbody playerRigidbody;
     public float playerSpeed;
 }
