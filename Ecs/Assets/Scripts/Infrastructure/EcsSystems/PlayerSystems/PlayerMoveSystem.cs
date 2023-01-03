@@ -12,8 +12,11 @@ public class PlayerMoveSystem : IEcsRunSystem
             ref var player = ref _filter.Get1(i);
             ref var input = ref _filter.Get2(i);
 
-            Vector3 direction = (Vector3.forward * input.moveInput.z + Vector3.right * input.moveInput.x).normalized;
-            player.characterController.Move(direction * player.playerSpeed * Time.fixedDeltaTime);
+            Vector3 smoothMoveVelocity = new Vector3();
+            Vector3 moveAmount = new Vector3();
+            Vector3 targetMoveAmount = input.moveInput * player.playerSpeed;
+            moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
+            player.characterController.Move(moveAmount);
         }
     }
 }

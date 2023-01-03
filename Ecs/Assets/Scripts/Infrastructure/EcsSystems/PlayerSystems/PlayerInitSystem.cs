@@ -17,6 +17,7 @@ public class PlayerInitSystem : IEcsInitSystem
         
         GameObject playerGo = Object.Instantiate(_staticData.playerPrefab, _sceneData.playerSpawnPoint.position, Quaternion.identity);
         player.characterController = playerGo.GetComponent<CharacterController>();
+        player.animator = playerGo.GetComponentInChildren<Animator>();
         player.playerSpeed = _staticData.playerSpeed;
         player.playerTransform = playerGo.transform;
     }

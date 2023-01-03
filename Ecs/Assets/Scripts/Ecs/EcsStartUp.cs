@@ -1,3 +1,4 @@
+using Infrastructure.EcsSystems.AnimationSystems;
 using Infrastructure.EcsSystems.CameraSystems;
 using Infrastructure.EcsSystems.Joystick;
 using Leopotam.Ecs;
@@ -29,6 +30,7 @@ public class EcsStartUp : MonoBehaviour
             .Add(new JoystickInit())
             .Add(new PlayerInitSystem())
             .Add(new PlayerRotationSystem())
+            .Add(new AnimationSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);

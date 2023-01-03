@@ -4,7 +4,8 @@ using UnityEngine;
 [Serializable]
 public struct Player
 {
-    public Transform playerTransform;
     public CharacterController characterController;
+    public Transform playerTransform;
+    public Animator animator;
     public float playerSpeed;
 }
