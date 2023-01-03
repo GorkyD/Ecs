@@ -1,4 +1,5 @@
 using Infrastructure.EcsSystems.CameraSystems;
+using Infrastructure.EcsSystems.Joystick;
 using Leopotam.Ecs;
 using UnityEngine;
 using Voody.UniLeo;
@@ -25,8 +26,9 @@ public class EcsStartUp : MonoBehaviour
 
         _updateSystems
             .ConvertScene()
+            .Add(new JoystickInit())
             .Add(new PlayerInitSystem())
-            //.Add(new PlayerRotationSystem())
+            .Add(new PlayerRotationSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);

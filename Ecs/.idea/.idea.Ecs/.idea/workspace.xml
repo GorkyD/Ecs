@@ -5,166 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fdaf81f-1d22-44c6-9cfd-e2b1106b5c1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/CameraSystems/CameraFollowSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/CameraSystems/CameraFollowSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/JoyStick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/JoyStick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/Joystick.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/Joystick/JoystickInit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/Joystick/JoystickInit.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ecs/EcsStartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ecs/EcsStartUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/CameraComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/CameraComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponentProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/CameraComponentProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/CameraComponentProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/CameraComponentProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerComponentProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/PlayerComponentProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerComponentProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/PlayerComponentProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerInputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/PlayerInputProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/PlayerInputProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/PlayerInputProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/TransformComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/TransformComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Components/TransformComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Components/TransformComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/PlayerInputData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/PlayerInputData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/PlayerInputData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/PlayerInputData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/RuntimeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/RuntimeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/RuntimeData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/RuntimeData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/SceneData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/SceneData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/SceneData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/StaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/StaticData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Data/StaticData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/StaticData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/CameraSystems.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraFollowSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraFollowSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/CameraSystems/CameraInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/CameraSystems/CameraInitSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/CameraSystems/CameraInitSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInitSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerInitSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerInputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerInputSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerInputSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerRotationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerRotationSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/EcsSystems/PlayerSystems/PlayerRotationSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerRotationSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastrucure/Entities.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Entities.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Static Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Static Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation/JoystickAnimator.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation/JoystickAnimator.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation/TouchHold.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation/TouchHold.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation/TouchNone.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Animation/TouchNone.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources/Readme Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources/Readme Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources/UJ_ScriptRef.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources/UJ_ScriptRef.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources/UltimateJoystickLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/Resources/UltimateJoystickLogo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/UltimateJoystickEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/UltimateJoystickEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/UltimateJoystickReadme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/UltimateJoystickReadme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/UltimateJoystickReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Editor/UltimateJoystickReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 00.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 00.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Minimalist Joystick 03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Simple Joystick.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Simple Joystick.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Ultimate Joystick.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Prefabs/Ultimate Joystick.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/README.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/README.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Scripts/UltimateJoystick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Scripts/UltimateJoystick.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Scripts/UltimateJoystickScreenSizeUpdater.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Scripts/UltimateJoystickScreenSizeUpdater.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/00_Minimalist_Joystick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/00_Minimalist_Joystick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/00_Minimalist_Tension.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/00_Minimalist_Tension.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/01_Minimalist_Joystick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/01_Minimalist_Joystick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/01_Minimalist_Tension.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/01_Minimalist_Tension.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/02_Minimalist_Joystick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/02_Minimalist_Joystick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/02_Minimalist_Tension.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/02_Minimalist_Tension.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/03_Minimalist_Joystick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/03_Minimalist_Joystick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/03_Minimalist_Tension.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Minimalist/03_Minimalist_Tension.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Ultimate.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Ultimate/Simple Joystick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Ultimate/Simple Joystick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Ultimate/Ultimate Joystick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/Textures/Ultimate/Ultimate Joystick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/JoystickTextureDemo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/JoystickTextureDemo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/Asteroid.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/Asteroid.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/ExplosionParticle.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/ExplosionParticle.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/SpaceshipGlow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/SpaceshipGlow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/SpaceshipHull.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Materials/SpaceshipHull.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Asteroid.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Asteroid.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Bullet.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Bullet.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Debris.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Debris.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Spaceship.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Models/Spaceship.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Asteroid.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Asteroid.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Bullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Debris.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Debris.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Explosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/Explosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/PlayerExplosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Prefabs/PlayerExplosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/README_Spaceship.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/README_Spaceship.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scenes/Spaceship.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scenes/Spaceship.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts/AsteroidController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts/AsteroidController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts/PlayerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Scripts/PlayerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Textures/Explosion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ultimate Joystick/_Examples/Spaceship Example/Textures/Explosion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Data/SceneData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/PlayerSystems/PlayerInputSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +92,7 @@
       <workItem from="1672124202331" duration="2021000" />
       <workItem from="1672130103796" duration="1221000" />
       <workItem from="1672191014831" duration="3625000" />
-      <workItem from="1672752174561" duration="3018000" />
+      <workItem from="1672752174561" duration="4785000" />
     </task>
     <servers />
   </component>
