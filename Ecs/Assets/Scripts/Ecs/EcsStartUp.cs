@@ -1,4 +1,4 @@
-using Infrastrucure.EcsSystems.CameraSystems;
+using Infrastructure.EcsSystems.CameraSystems;
 using Leopotam.Ecs;
 using UnityEngine;
 using Voody.UniLeo;
@@ -22,18 +22,21 @@ public class EcsStartUp : MonoBehaviour
         
         RuntimeData runtimeData = new RuntimeData();
 
+
         _updateSystems
             .ConvertScene()
-            .Add(new PlayerInputSystem())
             .Add(new PlayerInitSystem())
-            .Add(new PlayerRotationSystem())
+            //.Add(new PlayerRotationSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);
-
+        
         _fixedUpdateSystems
             .ConvertScene()
+            .Add(new PlayerInputSystem())
             .Add(new PlayerMoveSystem())
+            .Add(new CameraRotationSystem())
+            .Add(new CameraFollowSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);
@@ -41,7 +44,6 @@ public class EcsStartUp : MonoBehaviour
         _lateUpdateSystems
             .ConvertScene()
             .Add(new CameraInitSystem())
-            .Add(new CameraFollowSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);
