@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fdaf81f-1d22-44c6-9cfd-e2b1106b5c1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/MazeSystems/Neighbour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/EcsSystems/MazeSystems/Neighbour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/MazeServices/MazeGenerateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/MazeServices/MazeGenerateService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,7 @@
       <workItem from="1672130103796" duration="1221000" />
       <workItem from="1672191014831" duration="3625000" />
       <workItem from="1672752174561" duration="10270000" />
-      <workItem from="1672784538609" duration="7845000" />
+      <workItem from="1672784538609" duration="8417000" />
     </task>
     <servers />
   </component>

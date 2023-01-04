@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickPrefab: {fileID: 171032, guid: 74fc5435be064f84fa1a7b2a4b7af417, type: 3}
   playerPrefab: {fileID: 4504870071146948087, guid: ac7a56baa533def41973af64be5295ea, type: 3}
-  playerSpeed: 3
+  playerSpeed: 1
