@@ -15,7 +15,7 @@ public class PlayerInputSystem : IEcsRunSystem
             ref var joystick = ref _joyStickFilter.Get1(i);
             float x = joystick.UltimateJoystick.GetHorizontalAxis();
             float z = joystick.UltimateJoystick.GetVerticalAxis();
-            joystick.Direction = new Vector3(x, 0, z);
+            joystick.Direction = new Vector3(x, 0f, z);
             input.moveInput = joystick.Direction;
         }
     }
