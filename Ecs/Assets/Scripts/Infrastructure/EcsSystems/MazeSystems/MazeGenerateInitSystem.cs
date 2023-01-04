@@ -9,8 +9,8 @@ namespace Infrastructure.EcsSystems.MazeSystems
         private MazeRendererService _mazeRendererService;
         public void Init()
         {
-            WallState[,] maze = _mazeGenerateService.Generate(10,10);
-            _mazeRendererService.Draw(maze,10,10);
+            WallState[,] maze = _mazeGenerateService.Generate(100,100);
+            _mazeRendererService.Draw(maze,100,100);
         }
     }
 }
