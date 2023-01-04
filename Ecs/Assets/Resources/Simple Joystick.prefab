@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22471016}
   m_RootOrder: 1
@@ -58,12 +59,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.52156866, g: 0.52156866, b: 0.52156866, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b42445267eab0914fbe5b9c77467ea1d, type: 3}
+  m_Sprite: {fileID: 21300002, guid: cc0aaef8da2436943bfff87df32dc889, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -99,6 +102,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 22471018}
   - {fileID: 22471020}
@@ -107,8 +111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.136261, y: 1.136261}
-  m_SizeDelta: {x: 227.25, y: 227.25}
+  m_AnchoredPosition: {x: 464, y: 204.80005}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &171028
 GameObject:
@@ -138,6 +142,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22471016}
   m_RootOrder: 0
@@ -168,12 +173,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.52156866, g: 0.52156866, b: 0.52156866, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300002, guid: b42445267eab0914fbe5b9c77467ea1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfeca0647ac06eb4d82abbbbe25d1b53, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -214,6 +221,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 22471016}
   m_Father: {fileID: 0}
@@ -221,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 37.401245, y: 135.21376}
-  m_SizeDelta: {x: 229.52249, y: 229.52249}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1440, y: 2048}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &22271018
 CanvasRenderer:
@@ -247,6 +255,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -275,24 +285,24 @@ MonoBehaviour:
   joystick: {fileID: 22471020}
   joystickSizeFolder: {fileID: 22471016}
   joystickBase: {fileID: 22471018}
-  highlightBase: {fileID: 0}
-  highlightJoystick: {fileID: 0}
+  highlightBase: {fileID: 11471032}
+  highlightJoystick: {fileID: 11471022}
   tensionAccentUp: {fileID: 0}
   tensionAccentDown: {fileID: 0}
   tensionAccentLeft: {fileID: 0}
   tensionAccentRight: {fileID: 0}
   scalingAxis: 1
   anchor: 0
-  joystickTouchSize: 0
-  joystickSize: 2.5
+  joystickTouchSize: 3
+  joystickSize: 2
   radiusModifier: 4.5
-  dynamicPositioning: 0
-  customTouchSize_X: 50
-  customTouchSize_Y: 75
+  dynamicPositioning: 1
+  customTouchSize_X: 100
+  customTouchSize_Y: 80
   customTouchSizePos_X: 0
   customTouchSizePos_Y: 0
-  customSpacing_X: 5
-  customSpacing_Y: 20
+  customSpacing_X: 50
+  customSpacing_Y: 10
   gravity: 60
   extendRadius: 0
   axis: 0
@@ -302,22 +312,22 @@ MonoBehaviour:
   targetTapCount: 0
   deadZone: 0
   disableVisuals: 0
-  useFade: 0
-  fadeUntouched: 1
-  fadeTouched: 0.5
-  fadeInDuration: 1
-  fadeOutDuration: 1
+  useFade: 1
+  fadeUntouched: 0
+  fadeTouched: 1
+  fadeInDuration: 0.3
+  fadeOutDuration: 0
   useAnimation: 0
   joystickAnimator: {fileID: 9571034}
-  showHighlight: 0
-  highlightColor: {r: 0.118, g: 0.992, b: 0, a: 1}
+  showHighlight: 1
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
   showTension: 0
   tensionColorNone: {r: 0.11764706, g: 0.9882353, b: 0, a: 0}
   tensionColorFull: {r: 0.11764706, g: 0.9843137, b: 0, a: 1}
   joystickName: 
 --- !u!95 &9571034
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -330,10 +340,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!225 &22544412
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -342,7 +353,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171032}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
