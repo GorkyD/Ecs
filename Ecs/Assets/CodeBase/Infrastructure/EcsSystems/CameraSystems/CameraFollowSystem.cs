@@ -18,8 +18,8 @@ namespace Infrastructure.EcsSystems.CameraSystems
                 ref var cameraTransform = ref _filter.Get1(i);
                 ref var cameraComponent = ref _filter.Get2(i);
 
-                cameraTransform.transform.position = 
-                    Vector3.Lerp(cameraTransform.transform.position,cameraComponent.followTransform.position + _sceneData.mainCameraOffset,Time.deltaTime * 10f); ;
+                cameraTransform.Transform.position = 
+                    Vector3.Lerp(cameraTransform.Transform.position,cameraComponent.FollowTransform.position + _sceneData.mainCameraOffset,Time.deltaTime * 10f); ;
             }
         }
     }

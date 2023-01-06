@@ -1,11 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Infrastrucure.Components
 {
-    [Serializable]
     public struct TransformComponent
     {
-        public Transform transform;
+        public Transform Transform;
     }
 }

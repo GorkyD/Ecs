@@ -1,5 +1,4 @@
-﻿using CodeBase.Infrastructure.Services.Chunks;
-using Leopotam.Ecs;
+﻿using Leopotam.Ecs;
 using UnityEngine;
 
 public class PlayerInitSystem : IEcsInitSystem
@@ -12,14 +11,14 @@ public class PlayerInitSystem : IEcsInitSystem
     {
         EcsEntity playerEntity = _ecsWorld.NewEntity();
         AssetProvider assetProvider = new AssetProvider();
-        ref var player = ref playerEntity.Get<Player>();
+        ref var player = ref playerEntity.Get<PlayerComponent>();
         playerEntity.Get<PlayerInputData>();
         
         GameObject playerGo = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.Player), _sceneData.playerSpawnPoint.position, Quaternion.identity);
-        player.characterController = playerGo.GetComponent<CharacterController>();
-        player.animator = playerGo.GetComponentInChildren<Animator>();
-        player.playerSpeed = _staticData.playerSpeed;
-        player.playerTransform = playerGo.transform;
-        player.hands = playerGo.GetComponentsInChildren<Hand>();
+        player.CharacterController = playerGo.GetComponent<CharacterController>();
+        player.Animator = playerGo.GetComponentInChildren<Animator>();
+        player.PlayerSpeed = _staticData.playerSpeed;
+        player.PlayerTransform = playerGo.transform;
+        player.Hands = playerGo.GetComponentsInChildren<Hand>();
     }
 }

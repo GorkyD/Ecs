@@ -6,13 +6,13 @@ namespace Infrastructure.EcsSystems.ChainWeapon
     public class ChainWeaponInitSystem : IEcsInitSystem
     {
         private EcsWorld _ecsWorld;
-        private EcsFilter<Player> _playerFilter;
+        private EcsFilter<PlayerComponent> _playerFilter;
 
         public void Init()
         {
             AssetProvider assetProvider = new AssetProvider();
             ref var playerComponent = ref _playerFilter.Get1(1);
-            foreach (Hand hand in playerComponent.hands)
+            foreach (Hand hand in playerComponent.Hands)
             {
                 EcsEntity weaponEntity = _ecsWorld.NewEntity();
                 ref var chainWeapon = ref weaponEntity.Get<ChainWeaponComponent>();

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerRotationSystem : IEcsRunSystem
 {
-    private EcsFilter<Player> _filter;
-    private EcsFilter<JoyStick> _joystickFilter;
+    private EcsFilter<PlayerComponent> _filter;
+    private EcsFilter<JoyStickComponent> _joystickFilter;
     private SceneData _sceneData;
 
     public void Run()
@@ -16,7 +16,7 @@ public class PlayerRotationSystem : IEcsRunSystem
             ref var joystick = ref _joystickFilter.Get1(i);
             if (joystick.Direction != Vector3.zero)
             {
-                player.playerTransform.forward = joystick.Direction;
+                player.PlayerTransform.forward = joystick.Direction;
             }
         }
     }

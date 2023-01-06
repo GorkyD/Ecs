@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerMoveSystem : IEcsRunSystem
 {
-    private EcsFilter<Player, PlayerInputData> _filter;
+    private EcsFilter<PlayerComponent, PlayerInputData> _filter;
     
     public void Run()
     {
@@ -14,9 +14,9 @@ public class PlayerMoveSystem : IEcsRunSystem
 
             Vector3 smoothMoveVelocity = new Vector3();
             Vector3 moveAmount = new Vector3();
-            Vector3 targetMoveAmount = input.moveInput * player.playerSpeed;
+            Vector3 targetMoveAmount = input.MoveInput * player.PlayerSpeed;
             moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
-            player.characterController.Move(moveAmount);
+            player.CharacterController.Move(moveAmount);
         }
     }
 }

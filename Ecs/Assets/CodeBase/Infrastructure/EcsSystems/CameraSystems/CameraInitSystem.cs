@@ -5,7 +5,7 @@ namespace Infrastructure.EcsSystems.CameraSystems
 {
     public class CameraInitSystem : IEcsInitSystem
     {
-        private EcsFilter<Player> _playerFilter;
+        private EcsFilter<PlayerComponent> _playerFilter;
 
         private EcsWorld _ecsWorld;
         private StaticData _staticData;
@@ -15,12 +15,12 @@ namespace Infrastructure.EcsSystems.CameraSystems
         {
             EcsEntity cameraEntity = _ecsWorld.NewEntity();
             
-            ref Player player = ref _playerFilter.Get1(1);
+            ref PlayerComponent playerComponent = ref _playerFilter.Get1(1);
             ref var cameraComponent = ref cameraEntity.Get<CameraComponent>();
             ref var transformComponent = ref cameraEntity.Get<TransformComponent>();
 
-            transformComponent.transform = _sceneData.mainCamera.transform;
-            cameraComponent.followTransform = player.playerTransform;
+            transformComponent.Transform = _sceneData.mainCamera.transform;
+            cameraComponent.FollowTransform = playerComponent.PlayerTransform;
         }
     }
 }

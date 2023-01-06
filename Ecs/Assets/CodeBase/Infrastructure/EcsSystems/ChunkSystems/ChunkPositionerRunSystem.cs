@@ -8,7 +8,7 @@ namespace CodeBase.Infrastructure.Services.Chunks
     public class ChunkPositionerRunSystem : IEcsRunSystem
     {
 	    private EcsFilter<ChunkComponent> _chunkFilter;
-	    private EcsFilter<Player> _playerFilter;
+	    private EcsFilter<PlayerComponent> _playerFilter;
 
 	    public void Run()
 	    {
@@ -39,7 +39,7 @@ namespace CodeBase.Infrastructure.Services.Chunks
 	    {
 		    
 		    List<Transform> chunksForDisable = _chunkFilter.Get1(1).Chunks
-			    .Where(x => Vector3.Distance(x.position, _playerFilter.Get1(1).playerTransform.position) > _chunkFilter.Get1(1).Diagonal * 2)
+			    .Where(x => Vector3.Distance(x.position, _playerFilter.Get1(1).PlayerTransform.position) > _chunkFilter.Get1(1).Diagonal * 2)
 			    .ToList();
 		    chunksForDisable.ForEach(chunk =>
 		    {
@@ -68,7 +68,7 @@ namespace CodeBase.Infrastructure.Services.Chunks
 	    }
 	    private List<Vector3> GetSpawnPoints() 
 	    { 
-		    Vector3 nearestChunkPosition = _chunkFilter.Get1(1).Chunks.OrderBy(x=> Vector3.Distance(x.position, _playerFilter.Get1(1).playerTransform.position)).First().position; 
+		    Vector3 nearestChunkPosition = _chunkFilter.Get1(1).Chunks.OrderBy(x=> Vector3.Distance(x.position, _playerFilter.Get1(1).PlayerTransform.position)).First().position; 
 		    List<Vector3> spawnPoints = new List<Vector3>(_chunkFilter.Get1(1).SpawnDirections); 
 		    for (var i = 0; i < spawnPoints.Count; i++) 
 		    {

@@ -1,6 +1,5 @@
 ﻿using Infrastrucure.Components;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Infrastructure.EcsSystems.CameraSystems
 {
@@ -18,7 +17,7 @@ namespace Infrastructure.EcsSystems.CameraSystems
                 ref var cameraTransform = ref _filter.Get1(i);
                 ref var cameraComponent = ref _filter.Get2(i);
 
-                cameraTransform.transform.LookAt(cameraComponent.followTransform.position);
+                cameraTransform.Transform.LookAt(cameraComponent.FollowTransform.position);
             }
         }
     }

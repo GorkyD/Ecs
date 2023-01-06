@@ -1,13 +1,9 @@
 using CodeBase.Infrastructure.Services.Chunks;
 using Infrastructure.EcsSystems.AnimationSystems;
 using Infrastructure.EcsSystems.CameraSystems;
-using Infrastructure.EcsSystems.ChainWeapon;
 using Infrastructure.EcsSystems.Joystick;
-using Infrastructure.EcsSystems.MazeSystems;
 using Infrastructure.MazeGenerate;
-using Infrastructure.Services.Chunks;
 using Leopotam.Ecs;
-using Unity.VisualScripting;
 using UnityEngine;
 using Voody.UniLeo;
 using Zenject;

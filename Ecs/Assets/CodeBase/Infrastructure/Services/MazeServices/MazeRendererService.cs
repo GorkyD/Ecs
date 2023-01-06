@@ -12,7 +12,7 @@ namespace Infrastructure.MazeGenerate
         {
             AssetProvider assetProvider = new AssetProvider();
             _wall = assetProvider.Load<Transform>(AssetPath.Wall);
-            _wallsParent = Object.FindObjectOfType<WallComponent>().transform;
+            _wallsParent = Object.FindObjectOfType<Wall>().transform;
         }
 
         public void Draw(WallState[,] maze, int width, int height)

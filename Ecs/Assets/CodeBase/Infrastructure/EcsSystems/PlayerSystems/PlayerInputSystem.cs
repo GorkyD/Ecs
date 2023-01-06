@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInputSystem : IEcsRunSystem
 {
     private EcsFilter<PlayerInputData> _filter;
-    private EcsFilter<JoyStick> _joyStickFilter;
+    private EcsFilter<JoyStickComponent> _joyStickFilter;
 
     private float _xAxis;
     private float _zAxis;
@@ -29,7 +29,7 @@ public class PlayerInputSystem : IEcsRunSystem
             }
 
             joystick.Direction = new Vector3(_xAxis, 0f, _zAxis);
-            input.moveInput = joystick.Direction;
+            input.MoveInput = joystick.Direction;
         }
     }
 }

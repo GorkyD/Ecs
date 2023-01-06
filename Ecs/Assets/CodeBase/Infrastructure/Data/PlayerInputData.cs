@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-[Serializable]
 public struct PlayerInputData
 {
-    public Vector3 moveInput;
+    public Vector3 MoveInput;
 }

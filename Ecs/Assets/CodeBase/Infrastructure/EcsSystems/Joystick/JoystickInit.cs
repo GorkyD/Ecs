@@ -15,7 +15,7 @@ namespace Infrastructure.EcsSystems.Joystick
             {
                 EcsEntity joystickEntity = _ecsWorld.NewEntity();
                 AssetProvider assetProvider = new AssetProvider();
-                ref var joyStick = ref joystickEntity.Get<JoyStick>();
+                ref var joyStick = ref joystickEntity.Get<JoyStickComponent>();
                 GameObject joyStickGameObject = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.JoyStick),_sceneData.mainCanvas.transform);
                 joyStick.UltimateJoystick = joyStickGameObject.GetComponent<UltimateJoystick>();
             }
