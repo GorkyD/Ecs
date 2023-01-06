@@ -1,4 +1,5 @@
 ﻿using Infrastructure.MazeGenerate;
+using Infrastructure.Services.Chunks;
 using Leopotam.Ecs;
 using Zenject;
 

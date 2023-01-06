@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public struct Player
 {
-    public List<Transform> hands;
+    public Hand[] hands;
     public CharacterController characterController;
     public Transform playerTransform;
     public Animator animator;
