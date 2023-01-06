@@ -8,25 +8,16 @@ public class ChainWeaponSystem : IEcsRunSystem
     private EcsFilter<ChainWeaponComponent> _filter;
 
     private Transform _weaponModel;
-    private Transform _weaponController;
     private Transform[] _chainPoints;
     private LineRenderer _chainLine;
     private ChainDirection _chainDirection;
-    
-    private readonly LayerMask _wallLayers = 1 << 6;
-    
+
     private const float CurveSizeMultiplier = 1;
     private const float CurveSmoothing = 0.1f;  // range from 0.02f to 0.2f
-    private const float RayDistance = 1;        // range from 0f to 2f
-    private const float WtsDistance = 0.8f;     // range from 0f to 1f
 
     private readonly List<Vector3> _newPoints = new();
     private readonly List<Vector3> _finalPoints = new();
-
-    private float _currentDistance;
-    private float _slidingRequired;
-    private float _requiredDistance;
-
+    
     private bool _negativeDirection;
 
     public void Run()
@@ -35,36 +26,17 @@ public class ChainWeaponSystem : IEcsRunSystem
         {
             ref var chainWeaponComponent = ref _filter.Get1(i);
             _weaponModel = chainWeaponComponent.WeaponModel;
-            _weaponController = chainWeaponComponent.WeaponController;
             _chainPoints = chainWeaponComponent.ChainPoints;
             _chainLine = chainWeaponComponent.ChainLine;
             _chainDirection = chainWeaponComponent.ChainDirection;
-        
-            CheckWalls();
-            GetNewPoints();
+            
+            GetNewPoints(i);
         }
     }
 
-    private void CheckWalls()
-    {
-        Vector3 startPoint = _chainPoints[0].position;
-        Vector3 tipPoint = Bezier.LinearBezierCurve(startPoint, _weaponController.position, RayDistance);
-        
-        _requiredDistance = (tipPoint - startPoint).magnitude;
 
-        if (Physics.Linecast(startPoint, tipPoint, out var hit, _wallLayers))
-        {
-            Vector3 distanceModifier = Bezier.LinearBezierCurve(startPoint, hit.point, WtsDistance);
-            _currentDistance = (startPoint - distanceModifier).magnitude;
-            if (_currentDistance < _requiredDistance) _slidingRequired = _currentDistance / _requiredDistance; else _slidingRequired = 1;
-        }
-        else
-        {
-            _slidingRequired = 1;
-        }
-    }
 
-    private void GetNewPoints()
+    private void GetNewPoints(int iteration)
     {
         _newPoints.Clear();
        
@@ -72,14 +44,14 @@ public class ChainWeaponSystem : IEcsRunSystem
         _newPoints.Add(firstPoint);
 
         Vector3 secondPoint = firstPoint + (GetDir(0) * _chainPoints[0].localScale.x) * CurveSizeMultiplier;
-        secondPoint = GetDistance(firstPoint, secondPoint);
+        secondPoint = GetDistance(firstPoint, secondPoint,iteration);
         _newPoints.Add(secondPoint);
 
-        Vector3 finalPoint = GetDistance(_chainPoints[0].position, _chainPoints[1].position);
+        Vector3 finalPoint = GetDistance(_chainPoints[0].position, _chainPoints[1].position,iteration);
 
 
         Vector3 thirdPoint = finalPoint - (GetDir(1) * _chainPoints[1].localScale.x) * CurveSizeMultiplier;
-        thirdPoint = GetDistance(finalPoint, thirdPoint);
+        thirdPoint = GetDistance(finalPoint, thirdPoint,iteration);
         _newPoints.Add(thirdPoint);
 
         _newPoints.Add(finalPoint);
@@ -100,9 +72,9 @@ public class ChainWeaponSystem : IEcsRunSystem
         return calculationDirection;
     }
 
-    private Vector3 GetDistance(Vector3 previousPoint, Vector3 currentPoint)
+    private Vector3 GetDistance(Vector3 previousPoint, Vector3 currentPoint, int iteration)
     {
-        Vector3 pos = Bezier.LinearBezierCurve(previousPoint, currentPoint, _slidingRequired);
+        Vector3 pos = Bezier.LinearBezierCurve(previousPoint, currentPoint, _filter.Get1(iteration).SlidingRequired);
         return pos;
     }
 

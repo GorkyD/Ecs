@@ -9,5 +9,6 @@ namespace Infrastructure.EcsSystems.ChainWeapon
         public Transform[] ChainPoints;
         public LineRenderer ChainLine;
         public ChainDirection ChainDirection;
+        public float SlidingRequired;
     }
 }
