@@ -59,14 +59,14 @@ public class ChainWeaponSystem : IEcsRunSystem
         SubdividePoints();
     }
 
-    private Vector3 GetDir(int i)
+    private Vector3 GetDir(int chainIndex)
     {
-        Vector3 calculationDirection = _chainPoints[i].right;
+        Vector3 calculationDirection = _chainPoints[chainIndex].right;
         if (_chainDirection != ChainDirection.Default)
         {
-            calculationDirection = _chainDirection == ChainDirection.Forward ? _chainPoints[i].forward :
-                            _chainDirection == ChainDirection.Right ? _chainPoints[i].right :
-                            _chainDirection == ChainDirection.Up ? _chainPoints[i].up : _chainPoints[i].right;
+            calculationDirection = _chainDirection == ChainDirection.Forward ? _chainPoints[chainIndex].forward :
+                            _chainDirection == ChainDirection.Right ? _chainPoints[chainIndex].right :
+                            _chainDirection == ChainDirection.Up ? _chainPoints[chainIndex].up : _chainPoints[chainIndex].right;
         }
         if (_negativeDirection) calculationDirection = -calculationDirection;
         return calculationDirection;
