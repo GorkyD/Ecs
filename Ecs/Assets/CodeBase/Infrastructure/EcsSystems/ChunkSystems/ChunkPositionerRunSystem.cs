@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -12,12 +11,17 @@ namespace CodeBase.Infrastructure.Services.Chunks
 	    private EcsFilter<Player> _playerFilter;
 
 	    public void Run()
-        {
-	        SpawnInEightDimensions();
-	        DisableFarChunks();
-        }
+	    {
+		    Enable();
+	    }
 
-	    public void Disable()
+	    private void Enable()
+	    {
+		    SpawnInEightDimensions();
+		    DisableFarChunks();
+	    }
+
+	    private void Disable()
 	    {
 		    RemoveExcessChunks();
 	    }

@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Services.Chunks;
 using Leopotam.Ecs;
-using UniRx;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Services.Chunks
