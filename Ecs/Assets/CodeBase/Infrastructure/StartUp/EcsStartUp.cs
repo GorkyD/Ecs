@@ -1,3 +1,4 @@
+using CodeBase.Infrastructure.EcsSystems.EnemySystems;
 using CodeBase.Infrastructure.Services.Chunks;
 using Infrastructure.EcsSystems.AnimationSystems;
 using Infrastructure.EcsSystems.CameraSystems;
@@ -17,7 +18,7 @@ public class EcsStartUp : MonoBehaviour
     private EcsSystems _updateSystems;
     private EcsSystems _fixedUpdateSystems; 
     private EcsSystems _lateUpdateSystems;
-    private EcsSystems _generateSystems;
+    private EcsSystems _testSystems;
 
     private MazeGenerateService _mazeGenerateService;
     private MazeRendererService _mazeRendererService;
@@ -35,16 +36,15 @@ public class EcsStartUp : MonoBehaviour
         _updateSystems = new EcsSystems(_ecsWorld);
         _fixedUpdateSystems = new EcsSystems(_ecsWorld);
         _lateUpdateSystems = new EcsSystems(_ecsWorld);
-        _generateSystems = new EcsSystems(_ecsWorld);
+        _testSystems = new EcsSystems(_ecsWorld);
         
         RuntimeData runtimeData = new RuntimeData();
 
-        _generateSystems
+        _testSystems
             .ConvertScene()
             .Inject(_mazeGenerateService)
             .Inject(_mazeRendererService)
-            .Add(new ChunkPositionerInitSystem())
-            .Add(new ChunkPositionerRunSystem());
+            .Add(new EnemyInitSystem());
             //.Add(new ChainWeaponInitSystem())
             //.Add(new ChainWeaponSystem());
             //.Add(new MazeGenerateInitSystem());
@@ -56,6 +56,8 @@ public class EcsStartUp : MonoBehaviour
             .Add(new PlayerInitSystem())
             .Add(new PlayerRotationSystem())
             .Add(new AnimationSystem())
+            .Add(new ChunkPositionerInitSystem())
+            .Add(new ChunkPositionerRunSystem())
             .Inject(configuration)
             .Inject(sceneData)
             .Inject(runtimeData);
@@ -80,13 +82,13 @@ public class EcsStartUp : MonoBehaviour
         _updateSystems.Init();
         _fixedUpdateSystems.Init();
         _lateUpdateSystems.Init();
-        _generateSystems.Init();
+        _testSystems.Init();
     }
  
     private void Update()
     {
         _updateSystems?.Run();
-        _generateSystems?.Run();
+        _testSystems?.Run();
     }
 
     private void FixedUpdate()
@@ -110,8 +112,8 @@ public class EcsStartUp : MonoBehaviour
         _lateUpdateSystems?.Destroy();
         _lateUpdateSystems = null;
         
-        _generateSystems?.Destroy();
-        _generateSystems = null;
+        _testSystems?.Destroy();
+        _testSystems = null;
         
         _ecsWorld?.Destroy();
         _ecsWorld = null;
