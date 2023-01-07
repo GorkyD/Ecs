@@ -7,21 +7,22 @@ namespace CodeBase.Infrastructure.Services.Chunks
 {
 	public class ChunkPositionerInitSystem : IEcsInitSystem
 	{
-		private EcsWorld _ecsWorld;
 		private EcsFilter<ChunkComponent> _filter;
+		private EcsWorld _ecsWorld;
 
 		public void Init()
 		{
 			EcsEntity chunkEntity= _ecsWorld.NewEntity();
 			ref var chunk = ref chunkEntity.Get<ChunkComponent>();
-			chunk.GroundPrefab = Resources.Load<GameObject>(AssetPath.Ground);
-			chunk.ChunkWidth = GetChunkWidth();
+			AssetProvider assetProvider = new AssetProvider();
+			GameObject chunkReference = assetProvider.Load<GameObject>(AssetPath.Ground);
+			chunk.ChunkWidth = GetChunkWidth(chunkReference);
 			chunk.Diagonal = chunk.ChunkWidth * Mathf.Sqrt(2);
 			chunk.SpawnDirections = GetSpawnDirections();
 			chunk.Chunks = new List<Transform>();
 			chunk.Chunks.Add(Object.FindObjectOfType<Chunk>().transform);
 			chunk.ChunkPool = new Stack<Transform>();
-			FillChunkPool();
+			FillChunkPool(chunkReference);
 		}
 		
 		private List<Vector3> GetSpawnDirections()
@@ -38,17 +39,17 @@ namespace CodeBase.Infrastructure.Services.Chunks
 			return spawnPoints;
 		}
 
-		private void FillChunkPool()
+		private void FillChunkPool(GameObject chunkReference)
 		{
 			for (int i = 0; i < 30; i++)
 			{
-				GameObject chunk = Object.Instantiate(_filter.Get1(1).GroundPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
+				GameObject chunk = Object.Instantiate(chunkReference,new Vector3(0f, 0f, 0f), Quaternion.identity);
 				chunk.SetActive(false);
 				_filter.Get1(1).ChunkPool.Push(chunk.transform);
 			}
 		}
 
-		private float GetChunkWidth() => 
-			_filter.Get1(1).GroundPrefab.GetComponentsInChildren<MeshRenderer>().Select(x => x.bounds.size.x).Max();
+		private float GetChunkWidth(GameObject chunkReference) => 
+			chunkReference.GetComponentsInChildren<MeshRenderer>().Select(x => x.bounds.size.x).Max();
 	}
 }

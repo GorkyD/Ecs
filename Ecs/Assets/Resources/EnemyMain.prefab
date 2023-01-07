@@ -270,6 +270,18 @@ PrefabInstance:
       propertyPath: _maxHp
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4682912005741588885, guid: a42e2b9ed4a3b384b99ff935f925fc23, type: 3}
+      propertyPath: m_Mass
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682912005741588885, guid: a42e2b9ed4a3b384b99ff935f925fc23, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682912005741588885, guid: a42e2b9ed4a3b384b99ff935f925fc23, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 5461797770505285925, guid: a42e2b9ed4a3b384b99ff935f925fc23, type: 3}
       propertyPath: rmsCount
       value: 9

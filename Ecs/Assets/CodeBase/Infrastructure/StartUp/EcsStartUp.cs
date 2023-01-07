@@ -42,12 +42,20 @@ public class EcsStartUp : MonoBehaviour
 
         _testSystems
             .ConvertScene()
-            .Inject(_mazeGenerateService)
-            .Inject(_mazeRendererService)
-            .Add(new EnemyInitSystem());
+            //.Inject(_mazeGenerateService)
+            //.Inject(_mazeRendererService)
             //.Add(new ChainWeaponInitSystem())
             //.Add(new ChainWeaponSystem());
             //.Add(new MazeGenerateInitSystem());
+            .Add(new EnemyInitSystem())
+            .Add(new EnemyMovementSystem())
+            .Add(new EnemyRotationSystem())
+            .Add(new EnemyAnimationSystem())
+            .Add(new EnemyAttackSystem())
+            .Inject(configuration)
+            .Inject(sceneData)
+            .Inject(runtimeData);
+
             
             
         _updateSystems
@@ -55,7 +63,7 @@ public class EcsStartUp : MonoBehaviour
             .Add(new JoystickInit())
             .Add(new PlayerInitSystem())
             .Add(new PlayerRotationSystem())
-            .Add(new AnimationSystem())
+            .Add(new PlayerAnimationSystem())
             .Add(new ChunkPositionerInitSystem())
             .Add(new ChunkPositionerRunSystem())
             .Inject(configuration)

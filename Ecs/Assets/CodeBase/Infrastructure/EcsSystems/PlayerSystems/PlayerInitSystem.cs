@@ -1,4 +1,5 @@
-﻿using Leopotam.Ecs;
+﻿using CodeBase.Infrastructure.Components;
+using Leopotam.Ecs;
 using UnityEngine;
 
 public class PlayerInitSystem : IEcsInitSystem
@@ -12,13 +13,15 @@ public class PlayerInitSystem : IEcsInitSystem
         EcsEntity playerEntity = _ecsWorld.NewEntity();
         AssetProvider assetProvider = new AssetProvider();
         ref var player = ref playerEntity.Get<PlayerComponent>();
+        ref var playerHealth = ref playerEntity.Get<HealthComponent>();
         playerEntity.Get<PlayerInputData>();
         
-        GameObject playerGo = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.Player), _sceneData.playerSpawnPoint.position, Quaternion.identity);
-        player.CharacterController = playerGo.GetComponent<CharacterController>();
-        player.Animator = playerGo.GetComponentInChildren<Animator>();
+        GameObject playerGameObject = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.Player), _sceneData.playerSpawnPoint.position, Quaternion.identity);
+        player.Animator = playerGameObject.GetComponentInChildren<Animator>();
+        player.Rigidbody = playerGameObject.GetComponent<Rigidbody>();
         player.PlayerSpeed = _staticData.playerSpeed;
-        player.PlayerTransform = playerGo.transform;
-        player.Hands = playerGo.GetComponentsInChildren<Hand>();
+        player.PlayerTransform = playerGameObject.transform;
+        player.Hands = playerGameObject.GetComponentsInChildren<Hand>();
+        playerHealth.Health = _staticData.playerHealth;
     }
 }

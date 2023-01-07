@@ -16,7 +16,7 @@ public class PlayerMoveSystem : IEcsRunSystem
             Vector3 moveAmount = new Vector3();
             Vector3 targetMoveAmount = input.MoveInput * player.PlayerSpeed;
             moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
-            player.CharacterController.Move(moveAmount);
+            player.Rigidbody.velocity = moveAmount;
         }
     }
 }

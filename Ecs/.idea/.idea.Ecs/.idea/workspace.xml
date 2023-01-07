@@ -5,16 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fdaf81f-1d22-44c6-9cfd-e2b1106b5c1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/EnemyComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/EnemyComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyInitSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyInitSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/AttackComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/AttackComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/HealthComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/HealthComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyAnimationSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyAnimationSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyAttackSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyAttackSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyMovementSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyMovementSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyRotationSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyRotationSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ecs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/Joystick.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/JoystickSystems.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/Joystick/JoystickInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/JoystickSystems/JoystickInit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/Joystick/JoystickInit.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/JoystickSystems/JoystickInit.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Enemy/Attack.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Enemy/Attack.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Enemy/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/ChunkComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/ChunkComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/EnemyComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/EnemyComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/PlayerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Components/PlayerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/StaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/StaticData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/AnimationSystems/AnimationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/AnimationSystems/PlayerAnimationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/AnimationSystems/AnimationSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/AnimationSystems/PlayerAnimationSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/ChunkSystems/ChunkPositionerInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/ChunkSystems/ChunkPositionerInitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/EnemySystems/EnemyInitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/JoystickSystems/JoystickInit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/JoystickSystems/JoystickInit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/PlayerSystems/PlayerInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/PlayerSystems/PlayerInitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/EcsSystems/PlayerSystems/PlayerMoveSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StartUp/EcsStartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StartUp/EcsStartUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ChainWeapon.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ChainWeapon.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EnemyMain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EnemyMain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Develop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Develop.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Static Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Static Data.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +95,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26828">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26828" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -99,7 +124,7 @@
       <workItem from="1673022063582" duration="5263000" />
       <workItem from="1673035702453" duration="11233000" />
       <workItem from="1673047402068" duration="236000" />
-      <workItem from="1673119153265" duration="3125000" />
+      <workItem from="1673119153265" duration="12649000" />
     </task>
     <servers />
   </component>

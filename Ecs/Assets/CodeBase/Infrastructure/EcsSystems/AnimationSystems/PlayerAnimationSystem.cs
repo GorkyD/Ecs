@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Infrastructure.EcsSystems.AnimationSystems
 {
-    public class AnimationSystem : IEcsRunSystem
+    public class PlayerAnimationSystem : IEcsRunSystem
     {
         private EcsFilter<PlayerComponent,PlayerInputData> _playerFilter;
         private static readonly int Speed = Animator.StringToHash("Speed");

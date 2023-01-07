@@ -3,7 +3,7 @@
 public struct PlayerComponent
 {
     public Hand[] Hands;
-    public CharacterController CharacterController;
+    public Rigidbody Rigidbody;
     public Transform PlayerTransform;
     public Animator Animator;
     public float PlayerSpeed;

@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
+﻿
 using CodeBase.Infrastructure.Components;
+using Infrastrucure.Components;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -7,29 +8,26 @@ namespace CodeBase.Infrastructure.EcsSystems.EnemySystems
 {
     public class EnemyInitSystem : IEcsInitSystem
     {
-        private EcsWorld _ecsWorld;
         private EcsFilter<EnemyComponent> _filter;
-        
+        private StaticData _staticData;
+        private EcsWorld _ecsWorld;
+
         public void Init()
         {
-            EcsEntity enemy = _ecsWorld.NewEntity();
             AssetProvider assetProvider = new AssetProvider();
-            ref var enemyComponent = ref enemy.Get<EnemyComponent>();
-            GameObject enemyGameObject = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.Enemy));
-            enemyGameObject.SetActive(false);
-            enemyComponent.EnemyPrefab = enemyGameObject;
-            enemyComponent.EnemyPool = new Stack<GameObject>();
-            
-            FillEnemyPool();
-        }
-        
-        private void FillEnemyPool()
-        {
+            GameObject enemyReference = assetProvider.Load<GameObject>(AssetPath.Enemy);
             for (int i = 0; i < 15; i++)
-            {
-                GameObject enemy = Object.Instantiate(_filter.Get1(1).EnemyPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
-                enemy.SetActive(false);
-                _filter.Get1(1).EnemyPool.Push(enemy);
+            {   
+                EcsEntity enemyEntity = _ecsWorld.NewEntity();
+                ref var enemyComponent = ref enemyEntity.Get<EnemyComponent>();
+                ref var enemyTransform = ref enemyEntity.Get<TransformComponent>();
+                ref var enemyHealth = ref enemyEntity.Get<HealthComponent>();
+                GameObject enemyGameObject = Object.Instantiate(enemyReference, new Vector3(0f, 0f, 0f), Quaternion.identity);
+                enemyGameObject.SetActive(false);
+                enemyComponent.Animator = enemyGameObject.GetComponent<Animator>();
+                enemyComponent.Rigidbody = enemyGameObject.GetComponent<Rigidbody>();
+                enemyTransform.Transform = enemyGameObject.transform;
+                enemyHealth.Health = _staticData.enemyHealth;
             }
         }
     }

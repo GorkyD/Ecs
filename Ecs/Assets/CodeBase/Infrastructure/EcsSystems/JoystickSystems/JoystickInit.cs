@@ -8,6 +8,7 @@ namespace Infrastructure.EcsSystems.Joystick
     {
         private EcsWorld _ecsWorld;
         private SceneData _sceneData;
+        private StaticData _staticData;
 
         public void Init()
         {
