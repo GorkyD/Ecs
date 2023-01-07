@@ -28,7 +28,7 @@ public class ChainWeaponSystem : IEcsRunSystem
             _weaponModel = chainWeaponComponent.WeaponModel;
             _chainPoints = chainWeaponComponent.ChainPoints;
             _chainLine = chainWeaponComponent.ChainLine;
-            _chainDirection = chainWeaponComponent.ChainDirection;
+            _chainDirection = (ChainDirection)chainWeaponComponent.ChainDirection;
             
             GetNewPoints(i);
         }

@@ -16,17 +16,9 @@ public class PlayerInputSystem : IEcsRunSystem
         {
             ref var input = ref _filter.Get1(i);
             ref var joystick = ref _joyStickFilter.Get1(i);
-
-            if (Application.platform == RuntimePlatform.Android)
-            {
-                _xAxis = joystick.UltimateJoystick.GetHorizontalAxis();
-                _zAxis = joystick.UltimateJoystick.GetVerticalAxis();
-            }
-            else
-            {
-                _xAxis = Input.GetAxis("Horizontal");
-                _zAxis = Input.GetAxis("Vertical");
-            }
+            
+            _xAxis = joystick.UltimateJoystick.GetHorizontalAxis();
+            _zAxis = joystick.UltimateJoystick.GetVerticalAxis();
 
             joystick.Direction = new Vector3(_xAxis, 0f, _zAxis);
             input.MoveInput = joystick.Direction;

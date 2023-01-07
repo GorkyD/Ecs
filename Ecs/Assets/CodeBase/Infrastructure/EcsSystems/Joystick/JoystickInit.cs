@@ -11,14 +11,11 @@ namespace Infrastructure.EcsSystems.Joystick
 
         public void Init()
         {
-            if (Application.platform == RuntimePlatform.Android)
-            {
-                EcsEntity joystickEntity = _ecsWorld.NewEntity();
-                AssetProvider assetProvider = new AssetProvider();
-                ref var joyStick = ref joystickEntity.Get<JoyStickComponent>();
-                GameObject joyStickGameObject = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.JoyStick),_sceneData.mainCanvas.transform);
-                joyStick.UltimateJoystick = joyStickGameObject.GetComponent<UltimateJoystick>();
-            }
+            EcsEntity joystickEntity = _ecsWorld.NewEntity();
+            AssetProvider assetProvider = new AssetProvider();
+            ref var joyStick = ref joystickEntity.Get<JoyStickComponent>();
+            GameObject joyStickGameObject = Object.Instantiate(assetProvider.Load<GameObject>(AssetPath.JoyStick),_sceneData.mainCanvas.transform);
+            joyStick.UltimateJoystick = joyStickGameObject.GetComponent<UltimateJoystick>();
         }
     }
 }
